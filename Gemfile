@@ -10,4 +10,5 @@ group :jekyll_plugins do
   gem "jekyll-algolia"
   gem "github-pages"
   gem "jekyll-remote-theme"
+  gem 'github-pages'
 end
