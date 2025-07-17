@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   A portfolio of personal projects, blog posts, and other miscellanea.
 twitter_username: username
 github_username: LucasLyons
-minimal_mistakes_skin: air
+minimal_mistakes_skin: default
 search: true
 
 # Build settings
@@ -58,7 +58,7 @@ plugins:
 author:
   name   : "Lucas Lyons"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "I'm asomeone who loves learning, solving problems, and math. In my free time I'm learning to become a mahcine-learning practicioner.
+  bio    : "I'm aomeone who loves learning, solving problems, and math. In my free time I'm learning to become a mahcine-learning practicioner.
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
