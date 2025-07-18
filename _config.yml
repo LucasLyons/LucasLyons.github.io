@@ -25,7 +25,7 @@ url                      : https://lucaslyons.github.io
 baseurl                  : 
 repository               : LucasLyons/LucasLyons.github.io
 teaser                   : "/assets/LLogo.png"
-logo                     : "/Assets/LLogo.png"
+logo                     : "/assets/LLogo.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
