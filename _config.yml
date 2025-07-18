@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Lucas Lyons | Personal Page"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+title                    : "Lucas Lyons - Personal Page"
+title_separator          : 
+subtitle                 : 
 name                     : "Lucas Lyons"
 description              : "A portfolio consisting of projects, blog posts, and other miscellanea."
 url                      : https://lucaslyons.github.io
@@ -26,7 +26,7 @@ baseurl                  :
 repository               : LucasLyons/LucasLyons.github.io
 teaser                   : "/assets/LLogo.png"
 logo                     : "/assets/LLogo.png"
-masthead_title           : My personal page.
+masthead_title           : My personal portfolio + blog + corner of the internet.
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
