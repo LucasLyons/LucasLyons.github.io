@@ -26,7 +26,7 @@ baseurl                  :
 repository               : LucasLyons/LucasLyons.github.io
 teaser                   : "/assets/LLogo.png"
 logo                     : "/assets/LLogo.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : My personal page.
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
