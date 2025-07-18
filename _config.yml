@@ -116,7 +116,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Welcome to my space! I'm a consultant with a background in math and stats, currently teaching myself machine learning. Here is where I will document my learning process."
   location         : 
-  email            : "lucaselyons@outlook.com"
+  email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
