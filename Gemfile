@@ -8,6 +8,6 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
+  gem "jekyll-remote-theme"
   gem "github-pages", "~> 232"
-  gem "minimal-mistakes-jekyll"
 end
