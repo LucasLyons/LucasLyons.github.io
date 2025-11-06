@@ -6,8 +6,9 @@ group :jekyll_plugins do
   gem "jekyll-gist"
   gem "jekyll-feed"
   gem "jemoji"
-  gem "jekyll-include-cache"
+  gem "jekyll-include-cache", group: :jekyll_plugins
   gem "jekyll-algolia"
   gem "jekyll-remote-theme"
-  gem "github-pages", "~> 232"
+  gem "minimal-mistakes-jekyll"
+  gem "github-pages", group: :jekyll_plugins
 end

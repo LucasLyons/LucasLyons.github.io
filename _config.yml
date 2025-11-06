@@ -9,6 +9,8 @@
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+# Use 'theme' for local development, 'remote_theme' for GitHub Pages
+# theme: minimal-mistakes-jekyll
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -113,7 +115,7 @@ analytics:
 author:
   name             : "Lucas Lyons"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Welcome to my space! I'm a consultant with a background in math and stats, currently teaching myself machine learning. Here is where I will document my learning process."
+  bio              : "Welcome to personal blog, where I share my thoughts, projects, and whatever else I find interesting"
   location         : 
   email            :
   links:
@@ -301,6 +303,13 @@ compress_html:
     envs: development
 
 
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
+
 # Defaults
 defaults:
   # _posts
@@ -314,3 +323,11 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
