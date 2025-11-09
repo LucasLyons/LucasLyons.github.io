@@ -39,13 +39,13 @@ Now, consider the scenario of recommending items to users. Our data set takes th
 
 That is to say, we can "perform SVD" on the interaction matrix to obtain $k$-dimensional vectors for each item and user in our dataset, called the **item factors** and **user factors**. These embeddings compress the data contained in the interaction matrix and can be used in a variety of ways. In the following sections, I will explain how they are used to generate recommendations on Brewtiful. Note that we can't actually perform SVD on the interaction matrix, as most entries are empty (in practice, with large item catalogs, interaction matrices tend to be incredibly sparse). SVD models often use stochastic gradient descent or other numeric methods to compute the user and item factors.
 
-The LightFM model seeks to expand on the simple SVD model by allowing for metadata features to learned as well. In the LightFM model, each user and item can be assigned features. Common user features may include age, location, gender, etc. For beer recommendation, item features may be brewery, style, IBU, etc. Each item and user is then represented in $k$ dimensions by the sum of their features, usually including an identity feature analagous to the embedding learned in the SVD model:
+The LightFM model seeks to expand on the simple SVD model by allowing for metadata features to learned as well. In the LightFM model, each user and item can be assigned features. Common user features may include age, location, gender, etc. For beer recommendation, item features may be brewery, style, IBU, etc. Each item and user is then represented in $k$ dimensions by the sum of their features, usually including an identity feature analogous to the embedding learned in the SVD model:
 
 $$p_j = \sum_{i=0}^l f_{j_i}$$
 
 where $f_j$ are the features attributed to $p_j$. There are multiple benefits to this approach. First, new items and users can still be given embeddings based off of their features, whereas traditional SVD models can only handle items they have "seen before". Second, including metadata features can sometimes improve the quality of recommendations (although this is not always the case; features must be chosen carefully).
 
-Both LightFM and standard SVD models also learn *bias terms* to give a boost to high quality items. But how are the embeddings and bias terms used to served recommendations? Before answering that question, we'll briefly digress to subject of the training data for the LightFM model.
+Both LightFM and standard SVD models also learn *bias terms* to give a boost to high quality items. But how are the embeddings and bias terms used to serve recommendations? Before answering that question, we'll briefly digress the subject of the training data for the LightFM model.
 
 #### Data Pipeline: From Web Scraping to Embeddings
 
@@ -106,7 +106,7 @@ For users with at least 5 ratings, Brewtiful offers **personalized recommendatio
 2. **Relevance**: Match the user's taste profile
 3. **Diversity**: Avoid repetitive suggestions
 
-The primary drivers of this recommendations model are the embeddings learned from LightFM. However, these recommendations are served using a weighted K-means clustering approach, not cosine similarity like item-item recommendations.
+The primary drivers of this recommendation model are the embeddings learned from LightFM. However, these recommendations are served using a weighted K-means clustering approach, not cosine similarity like item-item recommendations.
 
 Here's how it works:
 
@@ -250,11 +250,17 @@ Brewtiful uses **Supabase Auth** with a cookie-based session model:
 4. Session stored in httpOnly cookies
 5. Middleware refreshes session on every request
 
-## What's Next?
+## Future Improvements?
 
 Brewtiful is a hobby project and it's unlikely I will continue to improve it much further.
 
 That being said, I learned many things working on it, including the steps I would take to scale it:
+
+**Cold Start Items**:
+- One of the biggest advantages of LightFM models is that you can use feature embeddings to give new items an embedding representation without interaction data. I have not exploited that fact for Brewtiful - all the items on brewtiful were items from the filtered dataset. There were many more items I could have generated embeddings for. I did not due so due to time constraints, but it would be easy to implement.
+
+**Proper Evaluation for K-means**:
+- The current model training notebooks (see link at bottom of page) evaluate the LightFM models on offline metrics, but the production model serves recommendations with a hybrid k-means system that is not evaluated. It would be interesting and useful to evaluate the actual production model (it would be even more interesting to evaluate its online performance).
 
 **User Embeddings**:
 - Generate persistent user vectors from rating history by training LightFM model on new interaction data. These user vectors could be used to improve the recommendation model (for example, reranking k-means results via user factor cosine similarity score).
@@ -264,10 +270,10 @@ That being said, I learned many things working on it, including the steps I woul
 - Incorporate user event tracking data to model (page clicks, searches, etc.)
 - Incorporate temporal signals (seasonal beers, trending styles)
 
-The `events` table already captures user interactions (`rate`, `view`, `search`, `get_recs`, `save`, `unsave`) with a flexible `jsonb` metadata field. This logging infrastructure could power future model iterations and product analytics.
+The `events` table already captures user interactions (`rate`, `view`, `search`, `get_recs`, `save`, `unsave`) with a flexible `jsonb` metadata field. This logging infrastructure could power future model iterations and product analytics (implicit interaction data).
 
 **MLOps**:
-With cloud computing, it would be possible to create a data pipeline to load user interaction/rating data from supabase, automatically retrain user and item embeddings, and use them to serve recommendations (while also implementing models to dynamically update recommendations as they ar now).
+With cloud computing, it would be possible to create a data pipeline to load user interaction/rating data from supabase, automatically retrain user and item embeddings, and use them to serve recommendations (while also implementing models to dynamically update recommendations as they are now).
 
 **User Experience Testing**:
 - A/B test for tuning various recommendation hyperparameters with metrics like CTR, precision, etc.

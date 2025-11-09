@@ -5,17 +5,19 @@ layout: single
 author_profile: true
 ---
 
-## About Me
+![Me in the NYC subway](../assets/images/lucas.png)
 
-Welcome, traveller. I'm Lucas Lyons, and this is where I share my learning process.
+Nice to meet you! I'm Lucas. I studied Mathematics and Statistics at the University of Toronto, and I'm currently working in consulting. I'm passionate about mathematics, statistics, and programming, and I'm teaching myself as much as I can on these topics. I'm love music and playing frisbee, and I believe in being open to the many possible experiences life has to offer.
 
-### Background
-
-I studied Mathematics and Statistics at the University of Toronto, and I'm currently working in consulting. I love learning and problem-solving. I'm passionate about music, I love playing frisbee, and I try to be open to the many possible experiences in life.
+Some random facts about me:
+- It took me 10 years to finish my undergraduate degree. I am planning to write a reflection on my experience soon.
+- I solo backpacked across Europe for 3 weeks in September of 2024, meeting many amazing people along the way!
 
 ### Get in Touch
 
 Feel free to reach out through any of the social links in my profile. I'm always interested in making new connections!
+
+[Here is a link to my resume.](../assets/documents/resume_2025_11_08.pdf) (last updated 2025-11-08)
 
 ---
 

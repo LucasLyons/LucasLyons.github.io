@@ -10,9 +10,9 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 # Use 'theme' for local development, 'remote_theme' for GitHub Pages
-# theme: minimal-mistakes-jekyll
-remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+theme: minimal-mistakes-jekyll
+# remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -27,7 +27,7 @@ baseurl                  :
 repository               : LucasLyons/LucasLyons.github.io
 teaser                   : "/assets/LLogo.png"
 logo                     : "/assets/LLogo.png"
-masthead_title           : My personal portfolio + blog + corner of the internet.
+masthead_title           : Personal Site
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
