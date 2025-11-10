@@ -14,4 +14,6 @@ I'm very excited to share the release of [Brewtiful](https://www.brewtifulapp.co
 
 Some documentation on the project is [here](/portfolio/brewtiful).
 
+I also added some basic information on my [about page](/about).
+
 I hope to update this page semi-regularly with what I'm up to, including more projects and stories.
