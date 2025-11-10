@@ -18,7 +18,7 @@ Some random facts about me:
 
 Feel free to reach out through any of the social links in my profile. I'm always interested in making new connections!
 
-[Here is a link to my resume.](../assets/documents/resume_2025_11_08.pdf) (last updated 2025-11-08)
+[Here is a link to my resume.](../assets/documents/resume.pdf) (last updated 2025-11-09)
 
 ---
 
