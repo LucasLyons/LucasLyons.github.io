@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-![Me in the NYC subway](../assets/images/lucas.png)
+![Me in Jersey City, holding my girlfriend's bag... ft. kittens](../assets/images/lucas.png)
 
 Nice to meet you! I'm Lucas. I'm currently an MS Statistics student at the University of Illinois at Urbana Champaign. I also studied Mathematics and Statistics at the University of Toronto. I'm passionate about mathematics, statistics, and programming, and my professional goal is to apply them in interesting ways to solve business problems. I love music and playing frisbee, and I believe in being open to the many possible experiences life has to offer.
 
