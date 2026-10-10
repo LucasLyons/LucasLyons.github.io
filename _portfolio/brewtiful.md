@@ -11,7 +11,7 @@ toc_sticky: true
 
 ## What is Brewtiful?
 
-**[Brewtiful]((https://www.brewtifulapp.com/))** is a beer discovery platform that helps users find new beers they'll love. With a catalog of over 60000+ beers from 6000+ breweries, the platform uses vector embeddings and machine learning to power recommendations help users find relevant items.
+**[Brewtiful](https://www.brewtifulapp.com/)** is a beer discovery platform that helps users find new beers they'll love. With a catalog of over 60000+ beers from 6000+ breweries, the platform uses vector embeddings and machine learning to power recommendations help users find relevant items.
 
 ## The Tech Stack
 
@@ -28,7 +28,7 @@ Brewtiful is a modern full-stack application:
 
 ### Using LightFM to Learn Embeddings
 
-The recommendations are "powered" by embeddings learned by a [LightFM](https://making.lyst.com/lightfm/docs/home.html). LightFM is itself a derivative of the classic [Matrix Factorization](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) (MF) technique. This post won't go into deep technical details about LightFM, but here is a brief crash course (skip this part if you are not interested in math). For a deep dive into the model training process, see this [Jupyter notebook](https://www.google.com) where I train a LightFM model on a public dataset. 
+The recommendations are "powered" by embeddings learned by a [LightFM](https://making.lyst.com/lightfm/docs/home.html). LightFM is itself a derivative of the classic [Matrix Factorization](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) (MF) technique. This post won't go into deep technical details about LightFM, but here is a brief crash course (skip this part if you are not interested in math). For a deep dive into the model training process, see this [Jupyter notebook](https://github.com/LucasLyons/Brewtiful/tree/main/brewtiful-fm-demo) where I train a LightFM model on a public dataset. 
 
 Classic MF models are often highly related to the concept of [singular value decomposition](https://en.wikipedia.org/wiki/Singular_value_decomposition) from linear algebra. The SVD of any $n\times m$ real matrix $M$ factors it into the form $M=UDV^T$, where $U,V$ are orthogonal and of dim. $n \times n$ and $m \times m$ respectively, and $D$ is of rectangular diagonal of dim. $n \times m$. Let $k<m,n$ and consider $M_k = U_k D_k V_k^T$, where $D_k$ is a $k\times k$ matrix consisting of the $k$ largest values from $D$, and $U_k, V_k$ are $n \times k$, $m \times k$ and consist of the matrices "truncated" by removing the columns from $U,V$ corresponding to the values removed from $D$. It turns out that $M_k$ is the best $k$-ranked approximation of $M$ as measured by the Frobenius norm.
 
